@@ -9,13 +9,13 @@
 
             <Label x:Name="txtErrors" Text="" HorizontalOptions="Center" />
 
-            <Image x:Name="imagen" Source="img0.jpg" HeightRequest="210" />
+            <Image x:Name="imagen" Source="img0.jpg" HeightRequest="300" />
 
             <Label x:Name="txtAhorcado" Text="" FontSize="Header" HorizontalOptions="Center"/>
 
             <Label x:Name="txtResult" Text="" FontSize="Large" HorizontalOptions="Center"/>
 
-            <Button x:Name="btnReset" Text="Reset" WidthRequest="200"/>
+            <Button x:Name="btnReset" Clicked="btnReset_Clicked" IsEnabled="{Binding AreButtonsEnabled}" Text="Reset" WidthRequest="200"/>
     
             <FlexLayout 
                 BindableLayout.ItemsSource="{Binding letras}"
