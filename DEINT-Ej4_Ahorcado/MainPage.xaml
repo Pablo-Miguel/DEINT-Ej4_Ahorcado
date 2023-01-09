@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Model="clr-namespace:DEINT_Ej4_Ahorcado.Modelo"
+             x:Class="DEINT_Ej4_Ahorcado.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Margin="0,20,0,20" Spacing="20">
+
+            <Label x:Name="txtErrors" Text="" HorizontalOptions="Center" />
+
+            <Image x:Name="imagen" Source="img0.jpg" HeightRequest="210" />
+
+            <Label x:Name="txtAhorcado" Text="" FontSize="Header" HorizontalOptions="Center"/>
+
+            <Label x:Name="txtResult" Text="" FontSize="Large" HorizontalOptions="Center"/>
+
+            <Button x:Name="btnReset" Text="Reset" WidthRequest="200"/>
+    
+            <FlexLayout 
+                BindableLayout.ItemsSource="{Binding letras}"
+                Wrap="Wrap"
+                Direction="Row"
+                JustifyContent="Center"
+                AlignItems="Center">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Button Text="{Binding .}" Clicked="Button_Clicked" />
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </FlexLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+    
+</ContentPage>
