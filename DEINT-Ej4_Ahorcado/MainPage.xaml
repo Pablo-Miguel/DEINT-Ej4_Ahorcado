@@ -15,9 +15,9 @@
 
             <Label x:Name="txtResult" Text="" FontSize="Large" HorizontalOptions="Center"/>
 
-            <Button x:Name="btnReset" Clicked="btnReset_Clicked" IsEnabled="{Binding AreButtonsEnabled}" Text="Reset" WidthRequest="200"/>
+            <Button x:Name="btnReset" Clicked="btnReset_Clicked" Text="Reset" WidthRequest="200"/>
     
-            <FlexLayout 
+            <FlexLayout x:Name="flexLayout"
                 BindableLayout.ItemsSource="{Binding letras}"
                 Wrap="Wrap"
                 Direction="Row"

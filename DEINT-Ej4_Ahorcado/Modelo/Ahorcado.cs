@@ -15,14 +15,29 @@ namespace DEINT_Ej4_Ahorcado.Modelo
         public List<string> lista { get; set; }
         public string ganador { get; set; }
         public int error { get; set; }
-        public bool AreButtonsEnabled { get; set; }
 
         public Ahorcado()
         {
-            lista = new List<string>() { "coche", "perro", "gato", "casa", "plato" };
+            lista = new List<string>() { 
+                "coche",
+                "perro",
+                "gato",
+                "casa",
+                "plato",
+                "esternocleidomastoideo",
+                "hipopotomonstrosesquipedaliofobia",
+                "otorrinolaringologo",
+                "idiosincrasia",
+                "desoxirribonucleico",
+                "paralelepipedo",
+                "ovoviviparo",
+                "caleidoscopio",
+                "electroencefalografista",
+                "supercalifragilisticoespialidoso",
+                "pneumonoultramicroscopicsilicovolcanoconiosis"
+            };
             ganador = getRnd();
             error = 0;
-            AreButtonsEnabled = true;
         }
 
         public string getRnd()
